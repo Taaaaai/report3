@@ -22,10 +22,6 @@ public class Enemy extends LivingThing {
      */
     public Enemy (String name, int maximumHP, int attack) {
         super(name,maximumHP,attack);
-        this.name = name;
-        hitPoint = maximumHP;
-        this.attack = attack;
-        dead = false;
 
     }
 
@@ -40,12 +36,9 @@ public class Enemy extends LivingThing {
      * 指定されたダメージを hitPoint から引き、死亡判定を行う。
      * @param damage 受けたダメージ
      */
-    public void wounded(int damage){
-        hitPoint -= damage;
-        if( hitPoint < 0 ) {
-            dead = true;
-            System.out.printf("モンスター%sは倒れた。\n", "スライム");
-        }
+    public void wounded(int damage) {
+        super.wounded(damage);
     }
+
 
 }
