@@ -38,6 +38,8 @@ public class Enemy extends LivingThing {
      */
     public void wounded(int damage) {
         super.wounded(damage);
+
+
     }
 
 
